@@ -1,7 +1,10 @@
 import React from 'react'
 import styles from './styles'
+import { connect } from 'react-redux'
+import { updateMovieList } from '../ducks/moviesReducer'
 
 const MovieConfirm = props => {
+  const { title, poster, rating } = props
   const confirmMovie = () => {
     props.history.push('/list')
   }
@@ -25,4 +28,11 @@ const MovieConfirm = props => {
     </div>
   )
 }
-export default MovieConfirm
+
+const mapStateToProps = state => {
+  const { title, poster, rating } = state
+
+  return { title, poster, rating }
+}
+
+export default connect(mapStateToProps)(MovieConfirm)
