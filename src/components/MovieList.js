@@ -3,6 +3,7 @@ import styles from './styles'
 import { connect } from 'react-redux'
 
 const MovieList = props => {
+  //the .map at the top of this component. Instead of mapping over an empty array, it should map over props.movies
   const movieList = props.movies.map(element => {
     return (
       <div style={styles.movieListItem}>
@@ -22,4 +23,9 @@ const MovieList = props => {
     </div>
   )
 }
-export default MovieList
+// This connects our MovieList component to have access to our redux state and map over the movies array.
+const mapStateToProps = state => {
+  const { movies } = state
+  return { movies }
+}
+export default connect(mapStateToProps)(MovieList)
