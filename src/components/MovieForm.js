@@ -26,7 +26,7 @@ class MovieForm extends Component {
     //When we submit, we pull the data from state
     //Invoke it in the context of the reducer so you import it then connect it (at the bottom)
     //Therefore, you can use it below with props
-    const { title, poster, rating } = this.stat
+    const { title, poster, rating } = this.state
     this.props.setMovieInfo(title, poster, rating) //This line connects to Redux and does stuff for us
 
     this.props.history.push('/confirm')

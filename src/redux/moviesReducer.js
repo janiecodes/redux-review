@@ -47,8 +47,8 @@ export const updateMovieList = newMovie => {
 //Every action that comes into the reducer has a type, for each action constant do one thing
 //if state is undefined then pass in initialState is what state=initialState means
 const moviesReducer = (state = initialState, action) => {
-    switch(action, type) { //What gets returned in the Action Builder function goes into the reducer as an action - that's why when you call type it is action.type
-        case SET_MOVE_INFO:
+    switch(action.type) { //What gets returned in the Action Builder function goes into the reducer as an action - that's why when you call type it is action.type
+        case SET_MOVIE_INFO:
             return {...state, ...action.payload}
         case UPDATE_MOVIE_LIST:
         //This case should return our current state object with the movies property being updated to a new array to include 
