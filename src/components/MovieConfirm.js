@@ -47,3 +47,9 @@ const mapStateToProps = state => {
 
 export default connect(mapStateToProps, { updateMovieList })(MovieConfirm)
 //Add an object containing the updateMovieList function as the second argument of the first invocation of connect
+
+//Each <Router> component creates a history object that keeps track of the current location (history.location) and 
+//also the previous locations in a stack. When the current location changes, the view is re-rendered and you get a sense of 
+//navigation. How does the current location change? The history object has methods such as history.push and history.replace to take 
+//care of that. The history.push method is invoked when you click on a <Link> component, and history.replace is called when you use a 
+//<Redirect>. Other methods — such as history.goBack and history.goForward — are used to navigate through the history stack by going back or forward a page.

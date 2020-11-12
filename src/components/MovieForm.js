@@ -29,7 +29,7 @@ class MovieForm extends Component {
     const { title, poster, rating } = this.state
     this.props.setMovieInfo(title, poster, rating) //This line connects to Redux and does stuff for us
 
-    this.props.history.push('/confirm')
+    this.props.history.push('/confirm') //
   }
 
   render() {
